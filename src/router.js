@@ -6,11 +6,11 @@ export default class Router extends HTMLElement {
 
       this.allRoutes = {
           "": {
-              view: "<start-view></start-view>",
+              view: "<landing-view></landing-view>",
               name: "start",
           },
           "project": {
-              view: "<project-view></project-view>",
+              view: "<landing-view></landing-view>",
               name: "hejhej",
           }
   }     
@@ -29,8 +29,13 @@ export default class Router extends HTMLElement {
         this.resolveRoute();
     }
 
-    resolveRoute() {
-        const newRoute = location.hash.replace("#", "");
-        this.currentRoute = newRoute;
-    }
+      resolveRoute() {
+      this.currentRoute = location.hash.replace("#", "");
+
+      this.render();
   }
+
+  render() {
+      this.innerHTML = this.routes[this.currentRoute]?.view || "<not-found></not-found>";
+  }
+}
