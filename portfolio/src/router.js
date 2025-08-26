@@ -11,7 +11,7 @@ export default class Router extends HTMLElement {
           },
           "project": {
               view: "<project-view></project-view>",
-              name: "Projekt",
+              name: "hejhej",
           }
   }     
 }
