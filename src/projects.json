@@ -1,8 +1,0 @@
-[
-  {
-    "name":"Tåg Förseningar",
-    "image":"./img/Tåg-Monter.png",
-    "description":"En applikation som trackar tågförseningar med hjälp utav Trafikverkets API.",
-    "link":"https://johansvenssons.github.io/webapp-project/"
-  }
-]
