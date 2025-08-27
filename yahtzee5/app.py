@@ -193,4 +193,7 @@ def internal_server_error(e):
 
 
 if __name__ == "__main__":
-    app.run(debug=True) #debug=True använd bara vid utveckling.
+    #app.run(debug=True) #debug=True använd bara vid utveckling.
+    import os
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
