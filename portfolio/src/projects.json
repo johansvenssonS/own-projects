@@ -10,5 +10,11 @@
     "image":"./img/spellcheckeer.png",
     "description":"Ett rättstavningsprogram i python",
     "link":"https://www.student.bth.se/~josg24/dbwebb-kurser/oopython/me/kmom10/spellchecker/app.cgi"
+  },
+  {
+    "name":"Yahtzee",
+    "image":"./img/yahtzee.png",
+    "description":"Ett yahtzee spel i python, kan ta tid att ladda in",
+    "link":"https://yahtzee-app-wyap.onrender.com"
   }
 ]
