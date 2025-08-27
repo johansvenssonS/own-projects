@@ -14,7 +14,7 @@
   {
     "name":"Yahtzee",
     "image":"./img/yahtzee.png",
-    "description":"Ett yahtzee spel i python, kan ta tid att ladda in",
+    "description":"Ett yahtzee spel i python, kan ta tid att ladda in hos render.com",
     "link":"https://yahtzee-app-wyap.onrender.com"
   }
 ]
