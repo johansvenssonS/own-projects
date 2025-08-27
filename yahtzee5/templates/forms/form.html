@@ -1,0 +1,16 @@
+<form action="{{ url_for('reroll') }}" method="post">
+  <div class="dice-container">
+    {% for die in hand.dice %}
+    <div class="die">
+      <img src="{{ url_for('static', filename='img/' ~ die.get_name() ~ '.png') }}" width="100" alt="Die {{ die.get_name() }}">
+      <label for="die{{ loop.index }}">{{ die.get_name() }}</label>
+      <input type="checkbox" id="die{{ loop.index }}" name="reroll" value="{{ loop.index }}"><br>
+    </div>
+    {% endfor %}
+  </div>
+  {% if reroll_count < 2 %}
+  <div style="display: flex; justify-content: center; margin-top: 0x;">
+    <button type="submit" class="button1">Slå om valda tärningar</button>
+  </div>
+  {% endif %}
+</form>

@@ -1,0 +1,27 @@
+{% include "header.html" %}
+<form action="{{ url_for('remove_entry') }}" method="post">
+<h1>Leaderboard: Antal Sparade Spel {{ leaderboard.entries.size() }}</h1>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Namn</th>
+        <th>Poäng</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for index in range(leaderboard.entries.size()) %}
+      {% set entry = leaderboard.entries.get(index) %}
+      <tr>
+        <td>{{ entry[0] }}</td>
+        <td>{{ entry[1] }}</td>
+        <td><input type="radio" name="index" value="{{ index }}"></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<button type="submit" class="button1">Ta bort valt spel</button>
+</form>
+
+{% include "footer.html" %}

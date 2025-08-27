@@ -1,0 +1,14 @@
+{% include "header.html" %}
+
+
+<h1>Om mig</h1>
+
+<p>Jag heter {{ name }} och mitt akronym är {{ akronym }}.</p>
+
+<img src="{{ url_for('static', filename='img/ball.png') }}" width="256" alt="Die {{ name }}"> 
+
+
+
+
+
+{% include "footer.html" %}

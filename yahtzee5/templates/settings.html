@@ -1,0 +1,34 @@
+{% include 'header.html' %}
+
+<div class="container" role="main">
+    <div class="container" style="min-height:20em">
+
+        <div class="row marketing">
+            <form action="{{ url_for('init') }}" method="post">
+                <label for = "players"> Välj antal spelare</label>
+                <select name="players" id="players">
+                    {% for player in amount_options %}
+                        <option value="{{ player }}"> {{player}}</option>"
+                    {% endfor %}
+            </select>
+            <br<br>
+            <button type= "submit" class = "btn btn-success btn-lg btn-block">Starta spelet!</a>
+        </form>
+        </div>
+        <div class="dice-container">
+            
+            {% for die in hand.dice %}
+            <div class="die">
+              <img src="{{ url_for('static', filename='img/' ~ die.get_name() ~ '.png') }}" width="200" alt="Die {{ die.get_name() }}">
+              <img src="{{ url_for('static', filename='img/' ~ die.get_name() ~ '.png') }}" width="200" alt="Die {{ die.get_name() }}">
+              <img src="{{ url_for('static', filename='img/' ~ die.get_name() ~ '.png') }}" width="200" alt="Die {{ die.get_name() }}">
+              <img src="{{ url_for('static', filename='img/' ~ die.get_name() ~ '.png') }}" width="200" alt="Die {{ die.get_name() }}">
+
+            </div>
+            {% endfor %}
+          </div>
+
+
+
+
+{% include 'footer.html' %}
